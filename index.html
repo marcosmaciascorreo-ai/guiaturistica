@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chihuahua Capital · Guia Turístico</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#f8f4ef;color:#2c2c2c;line-height:1.5}
+.hero{background:linear-gradient(135deg,#1a5276,#0e2f44);color:#fff;padding:50px 20px;text-align:center}
+.hero h1{font-size:2.5rem;margin-bottom:6px}
+.hero p{font-size:1.1rem;opacity:.85;margin-bottom:18px}
+.hero-stats{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.85rem}
+.hero-stats span{display:inline-block;background:rgba(255,255,255,.12);padding:6px 16px;border-radius:20px}
+nav{background:#2c2c2c;padding:10px 15px;position:sticky;top:0;z-index:100;display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+nav button{background:transparent;color:#bbb;border:1px solid transparent;padding:7px 18px;border-radius:20px;cursor:pointer;font-size:.85rem;transition:.3s}
+nav button:hover{color:#fff;border-color:#c47a4b}
+nav button.active{background:#c47a4b;color:#fff}
+.section{padding:30px 16px;max-width:1100px;margin:0 auto}
+.section-title{font-size:1.6rem;color:#1a5276;margin-bottom:20px;padding-bottom:8px;border-bottom:2px solid #c47a4b}
+.grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:500px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:800px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);transition:.3s;cursor:pointer}
+.card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.card-img{width:100%;height:170px;overflow:hidden;background:#e8d5c4}
+.card-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.card-img .placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:linear-gradient(135deg,#d4a574,#c47a4b);color:#fff}
+.card-body{padding:12px 14px 14px}
+.card-body h3{font-size:1rem;margin-bottom:4px}
+.card-body .cat{font-size:.75rem;color:#c47a4b;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.card-body p{font-size:.82rem;color:#666;margin-bottom:8px}
+.card-body a{display:inline-flex;align-items:center;gap:4px;background:#1a5276;color:#fff;padding:5px 12px;border-radius:6px;font-size:.78rem;text-decoration:none;transition:.3s}
+.card-body a:hover{background:#0e2f44}
+.card-num{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.55);color:#fff;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700}
+.card-img{position:relative}
+.grid-sm{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(min-width:500px){.grid-sm{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:800px){.grid-sm{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1100px){.grid-sm{grid-template-columns:repeat(5,1fr)}}
+.card-sm{border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.07);transition:.3s;text-align:center;cursor:pointer}
+.card-sm:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.card-sm .card-img{height:140px}
+.card-sm-body{padding:8px 10px 10px}
+.card-sm-body h4{font-size:.9rem;margin-bottom:2px}
+.card-sm-body p{font-size:.75rem;color:#666}
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:200;justify-content:center;align-items:center;padding:20px}
+.modal-overlay.active{display:flex}
+.modal{background:#fff;border-radius:14px;max-width:560px;width:100%;max-height:85vh;overflow-y:auto;animation:fadeUp .3s ease;position:relative}
+.modal-img{width:100%;height:200px;overflow:hidden;background:#e8d5c4}
+.modal-img img{width:100%;height:100%;object-fit:cover}
+.modal-body{padding:20px 22px 24px}
+.modal-body h2{font-size:1.3rem;color:#1a5276;margin-bottom:4px}
+.modal-body .modal-cat{font-size:.75rem;color:#c47a4b;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.modal-body .modal-desc{font-size:.9rem;color:#444;margin-bottom:12px;line-height:1.6}
+.modal-body .modal-hist{font-size:.85rem;color:#555;line-height:1.7;padding:12px 14px;background:#f8f4ef;border-radius:8px;border-left:3px solid #c47a4b}
+.modal-close{position:absolute;top:10px;right:14px;background:rgba(0,0,0,.5);color:#fff;border:none;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s}
+.modal-close:hover{background:rgba(0,0,0,.75)}
+footer{background:#2c2c2c;color:#aaa;text-align:center;padding:24px 16px;margin-top:30px;font-size:.82rem}
+footer strong{color:#fff}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.card,.card-sm{animation:fadeUp .4s ease forwards;animation-delay:calc(var(--i,0)*30ms)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>🏜️ Chihuahua Capital</h1>
+  <p>Guia Turístico — Lugares, Comida e Doces Típicos</p>
+  <div class="hero-stats"><span>🏛️ 19 Lugares</span><span>🌮 10 Pratos</span><span>🍬 5 Doces</span></div>
+</header>
+
+<nav id="filtros">
+  <button class="active" data-f="all">📍 Todos</button>
+  <button data-f="lugares">🏛️ Lugares</button>
+  <button data-f="comida">🌮 Comida</button>
+  <button data-f="dulces">🍬 Doces</button>
+</nav>
+
+<section id="s-lugares" class="section">
+  <h2 class="section-title">🏛️ Lugares Turísticos</h2>
+  <div class="grid" id="g-lugares"></div>
+</section>
+
+<section id="s-comida" class="section">
+  <h2 class="section-title">🌮 Comida Típica</h2>
+  <div class="grid-sm" id="g-comida"></div>
+</section>
+
+<section id="s-dulces" class="section">
+  <h2 class="section-title">🍬 Doces Típicos</h2>
+  <div class="grid-sm" id="g-dulces"></div>
+</section>
+
+<footer>
+  <p><strong>Chihuahua Capital</strong> — Guia Turístico 2025</p>
+  <p>📍 Chihuahua, Chih., México · 📞 072 (Informação turística)</p>
+  <p style="margin-top:12px"><a href="https://wa.me/526143133283" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#25D366;color:#fff;padding:8px 20px;border-radius:25px;text-decoration:none;font-size:.9rem;font-weight:600;transition:.3s">💬 Fale comigo pelo WhatsApp</a></p>
+  <div style="margin-top:16px"><img src="qr-code.png" alt="QR Code" style="width:140px;height:140px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.2)"></div>
+</footer>
+
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-img" id="modalImg"></div>
+    <div class="modal-body">
+      <div class="modal-cat" id="modalCat"></div>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-hist" id="modalHist"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const HISTORIAS = {
+  "Alegrias de Amaranto":"Amaranto torrado misturado com piloncillo derretido, formando uma barra doce e crocante. De origem pré-hispânica, esse doce era consumido pelos povos rarámuri da Sierra Tarahumara por seu alto valor energético.",
+  "Aqueduto de Chihuahua":"Obra hidráulica iniciada em 1751 por ordem do virreio Antonio María de Bucareli. Se estende por aproximadamente 5 km, dos quais se conservam 4 km com arcos de pedra. Abasteceu a cidade de água por mais de 200 anos.",
+  "Assado de Porco":"Cervo cozido lentamente em um molho vermelho de chile guajillo, alho e cominho. É servido com feijão cozido e tortillas de farinha. É o prato tradicional dos domingos em família em Chihuahua.",
+  "Burritos":"Nascidos na Cidade Juárez durante a Revolução Mexicana, os burritos são tortilhas de farinha recheadas com diversos ingredientes. O nome vem da forma enrolada que assemelha-se a uma 'burrita'. O recheio mais tradicional é de carne seca com chile colorado.",
+  "Caldo de Res":"Sopa substanciosa de carne com verduras da estação: milho, abobrinha, cenoura, batata, grão-de-bico e repolho. É o prato reconfortante por excelência nos frios invernos chihuahuenses, servido com limão, cebola e coentro.",
+  "Carne Seca (Machaca)":"Técnica de conservação de carne trazida pelos colonizadores espanhóis e adotada pelos povos do norte. A carne de vaca é desidratada ao sol e depois desfiada para ser cozida com pimenta. É o ingrediente estrela dos burritos chihuahuenses.",
+  "Catedral Metropolitana":"Sua construção começou em 1725 e levou mais de um século para ser concluída, até 1826. É de estilo barroco novohispano com torres gêmeas de pedra ocre. Em seu interior abriga um órgão monumental do século XIX e obras de arte sacra. Foi elevada a catedral em 1891 pelo papa Leão XIII.",
+  "Centro Histórico":"Declarado Zona de Monumentos Históricos em 1993, o centro de Chihuahua conserva ruas de paralelepípedo, casarões do século XIX e uma arquitetura que funde o estilo colonial com o porfiriato. É sede do comércio tradicional e da vida cultural.",
+  "Cocadas":"Dulce de coco ralado assado com açúcar e canela, com superfície dourada e crocante. Popular em todo o México, as cocadas chihuahuenses se destacam por serem mais tostadas e compactas.",
+  "Discada":"Prato típico das reuniões norteñas, cozinhado em um disco de arado (daí seu nome). Leva carne bovina, porco, chouriço, bacon, cebola, pimenta e cerveja. É um prato comunitário que é cozinhado ao ar livre em festas e churrascos.",
+  "Distrito Um":"O complexo urbano mais moderno de Chihuahua, inaugurado na década de 2010. Abriga torres residenciais, restaurantes de alta gastronomia, bares, lojas de design e espaços públicos. É o novo epicentro social e gastronômico da cidade.",
+  "Doce de Leite (Cajeta)":"Dulce de leite de cabra caramelizado, cozido lentamente até obter uma textura cremosa. É uma tradição das fazendas do norte do México, onde se aproveitava o leite de cabra para conservá-lo como doce.",
+  "Doce de Marmelo":"Dulce firme e doce elaborado com a polpa da marmelo, uma fruta trazida pelos espanhóis. De textura semelhante a um doce de fruta, é tradicional na época da colheita e costuma ser consumido com queijo chihuahua.",
+  "Estádio Monumental":"Inaugurado em 2005 com capacidade para 15.000 espectadores, é a casa dos Dorados de Chihuahua da Liga Mexicana de Beisebol. Tem sido sede de jogos de pré-temporada da LMB e shows massivos.",
+  "Fashion Mall":"O centro comercial mais grande e moderno de Chihuahua, inaugurado na década de 2010. Abriga lojas de departamentos, cinemas, restaurantes e áreas de entretenimento. É o destino favorito para fazer compras e passar o dia em família.",
+  "Figos Cristalizados":"Figos cozidos lentamente em calda de rapadura com canela e cravo, até que se cristalizam. Doce tradicional de Natal nas casas chihuahuenses, herdado das cozinhas conventuais da Colônia.",
+  "Gorditas de Farinha":"Tortilhas grossas de farinha de trigo, recheadas com feijão refrito, queijo, carne ou torresmo. Ao contrário das gorditas de milho do centro do país, as chihuahuenses são maiores e mais macias, típicas dos cafés da manhã do norte.",
+  "Grutas de Nombre de Dios":"Descobertas em 1998 e abertas ao público em 2001, essas cavernas possuem formações de estalactites e estalagmites com mais de 10.000 anos de idade. O percurso iluminado de 600 metros apresenta salas como o 'Salão dos Espelhos' e a 'Catedral de Pedra'.",
+  "Museo Casa Chihuahua":"Antigo Palácio Federal, foi aqui onde Miguel Hidalgo y Costilla esteve preso em 1811 antes de ser fuzilado. O museu exibe celas originais, documentos históricos e uma réplica do quarto onde passou suas últimas horas.",
+  "Museu Semente":"Inaugurado em 2003 como museu interativo de ciência e tecnologia, é o favorito das crianças chihuahuenses. Conta com mais de 50 exposições interativas sobre física, biologia e astronomia, incluindo um planetário.",
+  "Palacio de Gobierno":"Edificado em 1892 como sede do governo estadual, foi aqui onde Miguel Hidalgo recebeu sua última ceia antes de ser fuzilado em 1811. Em seu interior, os murais de Aarón Piña Mora narram a história do México desde a Independência até a Revolução.",
+  "Parque El Palomar":"Pequeno, mas emblemático parque do centro da cidade, conhecido por sua fonte com a escultura de uma pomba que lhe dá nome. É ponto de encontro de famílias e local de eventos culturais ao ar livre.",
+  "Parque Metropolitano El Rejón":"Inaugurado em 1992 ao redor da represa El Rejón, é o pulmão verde da cidade. Conta com 16 hectares de áreas verdes, calçadões, ciclovia, aviário e um lago artificial onde é possível alugar barcos.",
+  "Pimentões Recheados":"Pimentões poblanos assados, descascados, recheados com queijo chihuahua (ou picadillo), empanados com ovo e cobertos com molho de tomate. Embora sejam populares em todo o México, em Chihuahua se destacam por usar o queijo local.",
+  "Plaza del Mariachi":"Praça cultural e gastronômica localizada na Calle Juan Aldama, Zona Centro, a poucos passos do Palacio de Gobierno. Reúne diversos restaurantes, bares e cantinas ao redor de um kiosco central, com música de mariachi ao vivo. É ponto de encontro para turistas e locais, oferecendo desde pozole e cortes de carne até coquetéis e ambiente noturno. Também abriga eventos culturais como exposições de arte e apresentações de comédia.",
+  "Praça de Armas":"Coração do centro histórico desde a fundação da cidade em 1709. Originalmente chamada Praça da Constituição, foi o cenário de eventos cívicos e sociais. Seu quiosque de estilo parisiense data de 1895 e as jardineiras foram desenhadas pelo arquiteto Julio Corredor.",
+  "Queijo Chihuahua":"O queijo menonita, também conhecido como queijo chihuahua, é um queijo semiduro de leite de vaca com textura suave e sabor levemente ácido. Foi introduzido pelas comunidades menonitas estabelecidas no estado no início do século XX.",
+  "Quinta Gameros":"Construída entre 1907 e 1910 pelo arquiteto colombiano Julio Corredor para a família Gameros, é a máxima expressão do Art Nouveau no norte do México. Possui móveis originais da época, vitrais Tiffany e uma escada em caracol única.",
+  "Rua Liberdade (Passeio Bolívar)":"A rua de pedestres mais antiga da cidade. Originalmente, foi a rua principal do comércio local desde o século XVIII. Pedonalizada na década de 1990, hoje é um corredor de cafés, lojas artesanais e restaurantes, conservando seu espírito tradicional.",
+  "Sotol":"Bebida destilada ancestral da planta Dasylirion, conhecida como 'sotol'. Os indígenas do norte do México a consumiam cerimonialmente desde os tempos pré-hispânicos. Obtive a Denominação de Origem em 2002, sendo Chihuahua o principal produtor.",
+  "Teatro dos Heróis":"Inaugurado em 1983 com capacidade para 1.500 pessoas, é o espaço cultural mais importante da cidade. De estilo neoclássico, já abrigou apresentações da Orquestra Filarmônica de Chihuahua e eventos artísticos nacionais e internacionais.",
+  "Templo de São Francisco":"O templo mais antigo de Chihuahua, construído entre 1715 e 1741 pelo frade Miguel Nájar. Foi o centro de operações dos missionários franciscanos no norte do México. Em seu interior encontram-se retábulos barrocos e a imagem do Senhor dos Trabalhos.",
+  "Tortilla de Farinha":"A base da cozinha do norte, introduzida pelos espanhóis e aprimorada pelos cozinheiros do norte do México. As tortillas de farinha chihuahuenses são maiores, macias e elásticas do que as do sul, ideais para enrolar."
+};
+
+const LUGARES = [
+  {n:"Catedral Metropolitana",c:"História",d:"Imponente catedral barroca do séc. XVIII com torres gêmeas de cantaria ocre, ícone do centro.",i:"fotos/catedral-metropolitana.jpg"},
+  {n:"Palacio de Gobierno",c:"História",d:"Sede do governo estadual com murais históricos da Independência e da Revolução.",i:"fotos/palacio-de-gobierno.jpg"},
+  {n:"Quinta Gameros",c:"Cultura",d:"Mansão Art Nouveau de 1907, hoje museu regional com móveis originais.",i:"fotos/quinta-gameros.jpg"},
+  {n:"Museo Casa Chihuahua",c:"Cultura",d:"Antigo palácio federal onde ficou preso Miguel Hidalgo, museu interativo.",i:"fotos/museo-casa-chihuahua.jpg"},
+  {n:"Praça de Armas",c:"História",d:"Praça principal com quiosque, jardins e arquitetura colonial do centro histórico.",i:"fotos/plaza-de-armas.jpg"},
+  {n:"Templo de São Francisco",c:"História",d:"Igreja franciscana do séc. XVIII com fachada barroca e retábulos dourados.",i:"fotos/templo-de-san-francisco.jpg"},
+  {n:"Aqueduto de Chihuahua",c:"História",d:"Aqueduto colonial do séc. XVIII com arcos de cantaria, símbolo patrimonial.",i:"fotos/acueducto-de-chihuahua.jpg"},
+  {n:"Teatro dos Heróis",c:"Cultura",d:"Teatro principal neoclássico, sede de eventos culturais e artísticos.",i:"fotos/teatro-de-los-hroes.jpg"},
+  {n:"Grutas de Nombre de Dios",c:"Natureza",d:"Sistema de cavernas com estalactites, estalagmites e passeios iluminados.",i:"fotos/grutas-nombre-de-dios.jpg"},
+  {n:"Plaza del Mariachi",c:"Cultura",d:"Praça gastronômica e cultural com restaurantes, bares e música de mariachi ao vivo.",i:"fotos/plazadelmariachi.jpg"},
+  {n:"Parque Metropolitano El Rejón",c:"Natureza",d:"Zona ecológica ao redor da represa com trilhas, aves e áreas verdes.",i:"fotos/parque-metropolitano.jpg"},
+  {n:"Parque El Palomar",c:"Natureza",d:"Área verde com parquinho infantil, fontes e espaços recreativos.",i:"fotos/parque-el-palomar.jpg"},
+  {n:"Museu Semente",c:"Cultura",d:"Museu interativo de ciência e tecnologia para crianças com exposições lúdicas.",i:"fotos/museo-semilla.jpg"},
+  {n:"Centro Histórico",c:"Compras",d:"Ruas de pedestres com restaurantes, lojas de artesanato e arquitetura colonial.",i:"fotos/centro-histrico.jpg"},
+  {n:"Distrito Um",c:"Compras",d:"Complexo urbano moderno com restaurantes, bares, lojas e vida noturna.",i:"fotos/distrito-palomar.jpg"},
+  {n:"Estádio Monumental",c:"Esportes",d:"Estádio de beisebol moderno, casa dos Dorados de Chihuahua, capacidade 15.000.",i:"fotos/estadio-monumental.jpg"},
+  {n:"Fashion Mall",c:"Compras",d:"Centro comercial moderno com lojas de departamento, restaurantes e cinemas.",i:"fotos/fashion-mall.jpg"},
+  {n:"Rua Liberdade (Passeio Bolívar)",c:"Compras",d:"Rua de pedestres mais antiga, com lojas e cafés tradicionais.",i:"fotos/calle-libertad-paseo-bolvar.jpg"}
+];
+
+const COMIDAS = [
+  {n:"Burritos",d:"Tortilla de farinha recheada com carne seca, feijão ou assado. Invenção chihuahuense.",i:"fotos/burritos.jpg",e:"🌯"},
+  {n:"Carne Seca (Machaca)",d:"Carne de boi desidratada, desfiada e refogada com pimenta e especiarias.",i:"fotos/carne-seca.jpg",e:"🥩"},
+  {n:"Discada",d:"Guisado de boi, porco, chouriço e legumes cozido em disco de arado.",i:"fotos/discada.jpg",e:"🍳"},
+  {n:"Queijo Chihuahua",d:"Queijo semiduro menonita, cremoso e perfeito para derreter.",i:"fotos/queso-chihuahua.jpg",e:"🧀"},
+  {n:"Sotol",d:"Bebida destilada da planta de sotol, tradição norteña.",i:"fotos/sotol.jpg",e:"🥃"},
+  {n:"Caldo de Res",d:"Caldo substancioso com legumes, grão-de-bico e milho.",i:"fotos/caldo-de-res.jpg",e:"🍲"},
+  {n:"Gorditas de Farinha",d:"Tortillas grossas de farinha de trigo recheadas com feijão ou carne.",i:"fotos/gorditas-de-harina.jpg",e:"🫓"},
+  {n:"Assado de Porco",d:"Porco em molho vermelho de pimenta guajillo com feijão.",i:"fotos/asado-puerco.jpg",e:"🍖"},
+  {n:"Tortilla de Farinha",d:"Base da cozinha norteña, grande e macia, feita à mão.",i:"fotos/tortilla-de-harina.jpg",e:"🫓"},
+  {n:"Pimentões Recheados",d:"Pimentões poblanos empanados recheados com queijo Chihuahua.",i:"fotos/chiles-rellenos.jpg",e:"🌶️"}
+];
+
+const DULCES = [
+  {n:"Doce de Marmelo",d:"Doce firme de polpa de marmelo, tradicional norteño.",i:"fotos/dulce-membrillo.jpg",e:"🍯"},
+  {n:"Doce de Leite (Cajeta)",d:"Doce de leite de cabra caramelizado, cremoso.",i:"fotos/cajeta.jpg",e:"🥛"},
+  {n:"Cocadas",d:"Doce de coco ralado assado, dourado e crocante.",i:"fotos/cocadas.jpg",e:"🥥"},
+  {n:"Alegrias de Amaranto",d:"Amaranto com rapadura, doce tradicional nutritivo.",i:"fotos/alegrias.jpg",e:"🌾"},
+  {n:"Figos Cristalizados",d:"Figos cozidos em calda de rapadura.",i:"fotos/higos-cristalizados.jpg",e:"🍈"}
+];
+
+function imgTag(src, emoji){
+  if(src) return `<img src="${src}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=placeholder>${emoji||'📍'}</div>'">`;
+  return `<div class="placeholder">${emoji||'📍'}</div>`;
+}
+
+function abrirModal(item, tipo, tipoCat){
+  const img = document.getElementById('modalImg');
+  const cat = document.getElementById('modalCat');
+  const title = document.getElementById('modalTitle');
+  const desc = document.getElementById('modalDesc');
+  const hist = document.getElementById('modalHist');
+  const overlay = document.getElementById('modal');
+  
+  img.innerHTML = item.i ? `<img src="${item.i}" alt="">` : `<div class="placeholder">${item.e||'📍'}</div>`;
+  cat.textContent = tipoCat || tipo;
+  title.textContent = item.n;
+  desc.textContent = item.d;
+  
+  const historia = HISTORIAS[item.n];
+  hist.textContent = historia || 'História em construção — em breve adicionaremos mais dados sobre este lugar.';
+  
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function cerrarModal(){
+  document.getElementById('modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('modalClose').addEventListener('click', cerrarModal);
+document.getElementById('modal').addEventListener('click', function(e){
+  if(e.target === this) cerrarModal();
+});
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') cerrarModal();
+});
+
+function renderBig(id, items, emojiDefault, tipoCat){
+  const g = document.getElementById(id);
+  g.innerHTML = items.map((item,i) => `
+    <div class="card" style="--i:${i}" onclick='abrirModal(${JSON.stringify({n:item.n,d:item.d,i:item.i,e:item.e||emojiDefault})},"lugar","${item.c||''}")'>
+      <div class="card-img">
+        <div class="card-num">${i+1}</div>
+        ${imgTag(item.i, item.e || emojiDefault)}
+      </div>
+      <div class="card-body">
+        <div class="cat">${item.c||''}</div>
+        <h3>${item.n}</h3>
+        <p>${item.d}</p>
+        ${item.m ? `<a href="${item.m}" target="_blank" onclick="event.stopPropagation()">📍 Como chegar</a>` : ''}
+      </div>
+    </div>`).join('');
+}
+
+function renderSmall(id, items, defaultEmoji, tipo, tipoCat){
+  const g = document.getElementById(id);
+  g.innerHTML = items.map((item,i) => `
+    <div class="card-sm" style="--i:${i}" onclick='abrirModal(${JSON.stringify({n:item.n,d:item.d,i:item.i,e:item.e||defaultEmoji})},"${tipo}","${tipoCat||''}")'>
+      <div class="card-img">${imgTag(item.i, item.e||defaultEmoji)}</div>
+      <div class="card-sm-body">
+        <h4>${item.e||''} ${item.n}</h4>
+        <p>${item.d}</p>
+      </div>
+    </div>`).join('');
+}
+
+renderBig('g-lugares', LUGARES, '🏛️');
+renderSmall('g-comida', COMIDAS, '🌮', 'comida', 'Comida Típica');
+renderSmall('g-dulces', DULCES, '🍬', 'doce', 'Doce Típico');
+
+document.querySelectorAll('#filtros button').forEach(btn => {
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#filtros button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.f;
+    document.getElementById('s-lugares').style.display = (f==='all'||f==='lugares')?'block':'none';
+    document.getElementById('s-comida').style.display = (f==='all'||f==='comida')?'block':'none';
+    document.getElementById('s-dulces').style.display = (f==='all'||f==='dulces')?'block':'none';
+  });
+});
+</script>
+</body>
+</html>

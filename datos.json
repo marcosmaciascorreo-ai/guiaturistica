@@ -1,0 +1,290 @@
+{
+  "lugares": [
+    {
+      "nombre": "Catedral Metropolitana",
+      "categoria": "Historia",
+      "busqueda": "Catedral Metropolitana Chihuahua",
+      "coords": "28.6358,-106.0772",
+      "desc": "Imponente catedral barroca del siglo XVIII, ícono del centro histórico con sus torres gemelas de cantera ocre.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Catedral%20Metropolitana",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/catedral-metropolitana.jpg"
+    },
+    {
+      "nombre": "Palacio de Gobierno",
+      "categoria": "Historia",
+      "busqueda": "Palacio de Gobierno Chihuahua",
+      "coords": "28.6369,-106.0789",
+      "desc": "Sede del gobierno estatal con murales históricos de la Independencia y la Revolución Mexicana.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Palacio%20de%20Gobierno"
+    },
+    {
+      "nombre": "Quinta Gameros",
+      "categoria": "Cultura",
+      "busqueda": "Quinta Gameros Chihuahua",
+      "coords": "28.6386,-106.0744",
+      "desc": "Mansión estilo Art Nouveau de principios del siglo XX, hoy museo regional de arte.",
+      "imagen": "https://es.wikipedia.org/wiki/Archivo:Quinta_Gameros_-_Chihuahua,_Chihuahua_-_01.JPG",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/quinta-gameros.jpg"
+    },
+    {
+      "nombre": "Museo Casa Chihuahua",
+      "categoria": "Cultura",
+      "busqueda": "Museo Casa Chihuahua",
+      "coords": "28.6375,-106.0792",
+      "desc": "Antiguo palacio federal donde estuvo preso Miguel Hidalgo, hoy museo interactivo.",
+      "imagen": "https://en.wikipedia.org/wiki/Museo_Casa_Chihuahua",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/museo-casa-chihuahua.jpg"
+    },
+    {
+      "nombre": "Plaza de Armas",
+      "categoria": "Historia",
+      "busqueda": "Plaza de Armas Chihuahua",
+      "coords": "28.6363,-106.0778",
+      "desc": "Plaza principal rodeada de arquitectura colonial, kiosco y jardines.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Plaza%20de%20Armas",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/plaza-de-armas.jpg"
+    },
+    {
+      "nombre": "Templo de San Francisco",
+      "categoria": "Historia",
+      "busqueda": "Templo San Francisco Chihuahua",
+      "coords": "28.6394,-106.0756",
+      "desc": "Iglesia franciscana del siglo XVIII con fachada barroca y retablos dorados en su interior.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Templo%20de%20San%20Francisco",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/templo-de-san-francisco.jpg"
+    },
+    {
+      "nombre": "Acueducto de Chihuahua",
+      "categoria": "Historia",
+      "busqueda": "Acueducto Chihuahua",
+      "coords": "28.6411,-106.0583",
+      "desc": "Acueducto colonial del siglo XVIII con arcos de cantera, símbolo de la ciudad.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Acueducto%20de%20Chihuahua",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/acueducto-de-chihuahua.jpg"
+    },
+    {
+      "nombre": "Museo de la Lealtad Republicana",
+      "categoria": "Historia",
+      "busqueda": "Museo Lealtad Republicana Chihuahua",
+      "coords": "28.6370,-106.0800",
+      "desc": "Sitio histórico donde se gestó la lucha constitucionalista, con exhibiciones interactivas.",
+      "imagen": "https://es.wikipedia.org/wiki/Museo_Casa_de_Juárez_de_Chihuahua"
+    },
+    {
+      "nombre": "Teatro de los Héroes",
+      "categoria": "Cultura",
+      "busqueda": "Teatro de los Héroes Chihuahua",
+      "coords": "28.6380,-106.0820",
+      "desc": "Teatro principal de la ciudad con arquitectura neoclásica, sede de eventos culturales.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Teatro%20de%20los%20H%C3%A9roes",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/teatro-de-los-hroes.jpg"
+    },
+    {
+      "nombre": "Cerro de la Santa Bola",
+      "categoria": "Naturaleza",
+      "busqueda": "Cerro Santa Bola Chihuahua",
+      "coords": "28.6200,-106.0900",
+      "desc": "Formación rocosa emblemática con forma redonda, mirador natural de la ciudad.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Cerro%20de%20la%20Santa%20Bola"
+    },
+    {
+      "nombre": "Grutas de Nombre de Dios",
+      "categoria": "Naturaleza",
+      "busqueda": "Grutas Nombre de Dios Chihuahua",
+      "coords": "28.7000,-106.1100",
+      "desc": "Sistema de cuevas con formaciones naturales, estalactitas y estalagmitas iluminadas.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Grutas%20de%20Nombre%20de%20Dios"
+    },
+    {
+      "nombre": "Presa El Rejón",
+      "categoria": "Naturaleza",
+      "busqueda": "Presa El Rejón Chihuahua",
+      "coords": "28.6900,-106.0500",
+      "desc": "Lago artificial y área de esparcimiento con palapas, lanchas y zona deportiva.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Presa%20El%20Rej%C3%B3n"
+    },
+    {
+      "nombre": "Parque Metropolitano",
+      "categoria": "Naturaleza",
+      "busqueda": "Parque Metropolitano Chihuahua Presa Rejón",
+      "coords": "28.61365,-106.12974",
+      "desc": "Zona ecológica alrededor de la Presa El Rejón con senderos, aves y áreas verdes.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Parque%20Metropolitano"
+    },
+    {
+      "nombre": "Parque El Palomar",
+      "categoria": "Naturaleza",
+      "busqueda": "Parque El Palomar Chihuahua",
+      "coords": "28.6430,-106.0700",
+      "desc": "Área verde recreativa con juegos infantiles, fuentes y espacios para caminar.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Parque%20El%20Palomar"
+    },
+    {
+      "nombre": "Museo Semilla",
+      "categoria": "Cultura",
+      "busqueda": "Museo Semilla Chihuahua",
+      "coords": "28.6400,-106.0650",
+      "desc": "Museo interactivo de ciencia y tecnología para niños con exhibiciones lúdicas.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Museo%20Semilla",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/museo-semilla.jpg"
+    },
+    {
+      "nombre": "Centro Histórico",
+      "categoria": "Compras",
+      "busqueda": "Centro Histórico Chihuahua calles",
+      "coords": "28.6360,-106.0770",
+      "desc": "Calles peatonales llenas de restaurantes, tiendas artesanales y arquitectura colonial.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Centro%20Hist%C3%B3rico",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/centro-histrico.jpg"
+    },
+    {
+      "nombre": "Distrito Palomar",
+      "categoria": "Compras",
+      "busqueda": "Distrito Palomar Chihuahua",
+      "coords": "28.6450,-106.0600",
+      "desc": "Zona comercial y de entretenimiento con restaurantes, bares y tiendas.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Distrito%20Palomar"
+    },
+    {
+      "nombre": "Estadio Monumental Chihuahua",
+      "categoria": "Deportes",
+      "busqueda": "Estadio Monumental Chihuahua beisbol",
+      "coords": "28.6600,-106.0950",
+      "desc": "Estadio de béisbol moderno, casa de los Dorados de Chihuahua.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Estadio%20Monumental%20Chihuahua"
+    },
+    {
+      "nombre": "Museo de la Revolución",
+      "categoria": "Historia",
+      "busqueda": "Museo Revolución Chihuahua",
+      "coords": "28.6360,-106.0810",
+      "desc": "Museo dedicado a la Revolución Mexicana con objetos históricos y documentos originales.",
+      "imagen": "https://es.wikipedia.org/wiki/Chihuahua_(Chihuahua)",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/museo-de-la-revolucin.jpg"
+    },
+    {
+      "nombre": "Calle Libertad Paseo Bolívar",
+      "categoria": "Compras",
+      "busqueda": "Calle Libertad Chihuahua Paseo Bolivar",
+      "coords": "28.6370,-106.0780",
+      "desc": "Calle peatonal comercial más antigua de la ciudad, con tiendas y cafés tradicionales.",
+      "imagen": "https://via.placeholder.com/600x400/1a5276/ffffff?text=Calle%20Libertad%20Paseo%20Bol%C3%ADvar",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/calle-libertad-paseo-bolvar.jpg"
+    }
+  ],
+  "comidas": [
+    {
+      "nombre": "Burritos",
+      "busqueda": "Burritos Chihuahua comida típica",
+      "desc": "Tortilla de harina rellena de carne seca, frijoles o asado. Invento chihuahuense.",
+      "imagen": "https://via.placeholder.com/400x300/2C5530/ffffff?text=Burritos"
+    },
+    {
+      "nombre": "Carne Seca (Machaca)",
+      "busqueda": "Carne seca machaca Chihuahua",
+      "desc": "Carne de res deshidratada al sol, deshebrada y cocinada con chile y especias.",
+      "imagen": "https://via.placeholder.com/400x300/2C5530/ffffff?text=Carne%20Seca%20%28Machaca%29"
+    },
+    {
+      "nombre": "Discada",
+      "busqueda": "Discada norteña Chihuahua",
+      "desc": "Guiso de res, cerdo, chorizo y verduras cocinado en disco de arado.",
+      "imagen": "https://via.placeholder.com/400x300/2C5530/ffffff?text=Discada"
+    },
+    {
+      "nombre": "Queso Chihuahua",
+      "busqueda": "Queso Chihuahua menonita",
+      "desc": "Queso semiduro elaborado por comunidades menonitas, ideal para fundir.",
+      "imagen": "https://via.placeholder.com/400x300/2C5530/ffffff?text=Queso%20Chihuahua"
+    },
+    {
+      "nombre": "Sotol",
+      "busqueda": "Sotol Chihuahua bebida típica",
+      "desc": "Bebida destilada tradicional de la planta de sotol, similar al mezcal.",
+      "imagen": "https://es.wikipedia.org/wiki/Sotol"
+    },
+    {
+      "nombre": "Caldo de Res",
+      "busqueda": "Caldo de res norteño Chihuahua",
+      "desc": "Caldo sustancioso de res con verduras, garbanzos y elote.",
+      "imagen": "https://via.placeholder.com/400x300/2C5530/ffffff?text=Caldo%20de%20Res",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/caldo-de-res.jpg"
+    },
+    {
+      "nombre": "Gorditas de Harina",
+      "busqueda": "Gorditas de harina Chihuahua",
+      "desc": "Tortillas gruesas de harina de trigo rellenas de frijoles, carne o queso.",
+      "imagen": "https://via.placeholder.com/400x300/2C5530/ffffff?text=Gorditas%20de%20Harina",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/gorditas-de-harina.jpg"
+    },
+    {
+      "nombre": "Asado de Puerco",
+      "busqueda": "Asado de puerco Chihuahua",
+      "desc": "Carne de cerdo en salsa roja de chile guajillo, acompañado de frijoles.",
+      "imagen": "https://via.placeholder.com/400x300/2C5530/ffffff?text=Asado%20de%20Puerco"
+    },
+    {
+      "nombre": "Tortilla de Harina",
+      "busqueda": "Tortilla de harina Sonorense Chihuahua",
+      "desc": "Tortilla grande y suave de harina de trigo, base de la cocina norteña.",
+      "imagen": "https://via.placeholder.com/400x300/2C5530/ffffff?text=Tortilla%20de%20Harina",
+      "imagen_local": "/home/lenovo/hermes-output/chihuahua-site/fotos/tortilla-de-harina.jpg"
+    },
+    {
+      "nombre": "Chiles Rellenos",
+      "busqueda": "Chiles rellenos norteños Chihuahua",
+      "desc": "Chiles poblanos capeados rellenos de queso Chihuahua o picadillo.",
+      "imagen": "https://via.placeholder.com/400x300/2C5530/ffffff?text=Chiles%20Rellenos"
+    }
+  ],
+  "dulces": [
+    {
+      "nombre": "Dulce de Membrillo",
+      "busqueda": "Dulce membrillo Chihuahua",
+      "desc": "Dulce firme y dulce hecho de pulpa de membrillo, tradicional en la región.",
+      "imagen": "https://via.placeholder.com/400x300/6B3A2A/ffffff?text=Dulce%20de%20Membrillo"
+    },
+    {
+      "nombre": "Cajeta de Leche",
+      "busqueda": "Cajeta de leche Chihuahua",
+      "desc": "Dulce de leche de cabra caramelizada, cremoso y tradicional.",
+      "imagen": "https://es.wikipedia.org/wiki/Cajeta_de_Celaya"
+    },
+    {
+      "nombre": "Jamoncillo",
+      "busqueda": "Jamoncillo dulce típico Chihuahua",
+      "desc": "Dulce de leche con nuez o piñón, de textura suave y sabor dulce.",
+      "imagen": "https://via.placeholder.com/400x300/6B3A2A/ffffff?text=Jamoncillo"
+    },
+    {
+      "nombre": "Empanadas de Calabaza",
+      "busqueda": "Empanadas calabaza Chihuahua",
+      "desc": "Empanadas horneadas rellenas de dulce de calabaza con canela.",
+      "imagen": "https://via.placeholder.com/400x300/6B3A2A/ffffff?text=Empanadas%20de%20Calabaza"
+    },
+    {
+      "nombre": "Dulce de Camote",
+      "busqueda": "Dulce camote Chihuahua",
+      "desc": "Camote cocido con piloncillo y canela, dulce típico de la región.",
+      "imagen": "https://via.placeholder.com/400x300/6B3A2A/ffffff?text=Dulce%20de%20Camote"
+    },
+    {
+      "nombre": "Cocadas",
+      "busqueda": "Cocadas Chihuahua dulce",
+      "desc": "Dulce de coco rallado horneado, dorado y crujiente por fuera.",
+      "imagen": "https://via.placeholder.com/400x300/6B3A2A/ffffff?text=Cocadas"
+    },
+    {
+      "nombre": "Alegrías de Amaranto",
+      "busqueda": "Alegrias amaranto Chihuahua",
+      "desc": "Dulce de amaranto con piloncillo, tradicional y nutritivo.",
+      "imagen": "https://via.placeholder.com/400x300/6B3A2A/ffffff?text=Alegr%C3%ADas%20de%20Amaranto"
+    },
+    {
+      "nombre": "Higos Cristalizados",
+      "busqueda": "Higos cristalizados dulce Chihuahua",
+      "desc": "Higos cocidos en almíbar de piloncillo hasta cristalizar.",
+      "imagen": "https://via.placeholder.com/400x300/6B3A2A/ffffff?text=Higos%20Cristalizados"
+    }
+  ]
+}
